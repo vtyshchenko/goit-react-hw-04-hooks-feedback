@@ -1,0 +1,25 @@
+@import './variables.scss';
+
+.componenet {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 973px;
+  height: 473px;
+  background: center / cover no-repeat url('./images/background.jpg');
+  border-radius: 20px;
+
+  margin: 25px auto 0;
+  padding: 50px 20px 30px 20px;
+}
+
+.container {
+  display: block;
+  width: 320px;
+  background-color: rgba(166, 63, 35, 0.5);
+  border: 2px $container-border-color solid;
+  border-radius: 10px;
+
+  margin-left: 130px;
+  padding: 20px 10px;
+}

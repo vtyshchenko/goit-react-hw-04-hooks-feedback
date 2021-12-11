@@ -1,0 +1,39 @@
+@import '../variables.scss';
+
+.stat {
+  font-weight: 700;
+  color: $text-main-color;
+}
+
+.item {
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.percent {
+  font-style: italic;
+}
+
+.itemTotal {
+  margin: 10px 0 20px 0;
+}
+
+.good {
+  color: $color-good;
+  font-weight: 700;
+}
+
+.neutral {
+  color: $color-neutral;
+  font-weight: 700;
+}
+
+.bad {
+  color: $color-bad;
+  font-weight: 700;
+}
+
+.total {
+  color: $text-main-color;
+  font-weight: 700;
+}
