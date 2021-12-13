@@ -13,7 +13,6 @@ function Feedback() {
   const [good, setGood] = useState(0);
   const [neutral, setNeutral] = useState(0);
   const [bad, setBad] = useState(0);
-  let message = '';
 
   function countTotalFeedback() {
     return good + neutral + bad;
@@ -24,26 +23,26 @@ function Feedback() {
     return count > 0 ? ((good * 100) / count).toFixed(2) : 0;
   }
 
-  const onLeaveFeedback = idx => {
+  function onLeaveFeedback(idx) {
     switch (options[idx]) {
       case 'Good':
         setGood(state => state + 1);
-        message = 'Thanks for your feedback. We are waiting for you again soon)))';
+        window['message'] = 'Thanks for your feedback. We are waiting for you again soon)))';
         break;
       case 'Neutral':
         setNeutral(state => state + 1);
-        message = 'Thanks for your feedback. We will work on ourselves';
+        window['message'] = 'Thanks for your feedback. We will work on ourselves';
         break;
       case 'Bad':
         setBad(state => state + 1);
-        message =
+        window['message'] =
           'Thanks for your feedback. Sorry to keep you unhappy. We will work on ourselves so that does not happen again';
         break;
 
       default:
         break;
     }
-  };
+  }
 
   const countTotal = countTotalFeedback();
 
@@ -68,7 +67,7 @@ function Feedback() {
         )}
       </div>
 
-      {countTotal && <Thanks message={message} />}
+      {countTotal && <Thanks message={window['message']} />}
     </div>
   );
 }
